@@ -1,0 +1,94 @@
+{
+  "name": "default",
+  "width": 800,
+  "height": 600,
+  "startLine": {
+    "x1": 360,
+    "y1": 520,
+    "x2": 440,
+    "y2": 520,
+    "direction": 270
+  },
+  "zones": [
+    {
+      "type": "barrier",
+      "shape": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 40
+    },
+    {
+      "type": "barrier",
+      "shape": "rect",
+      "x": 0,
+      "y": 560,
+      "width": 800,
+      "height": 40
+    },
+    {
+      "type": "barrier",
+      "shape": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 600
+    },
+    {
+      "type": "barrier",
+      "shape": "rect",
+      "x": 760,
+      "y": 0,
+      "width": 40,
+      "height": 600
+    },
+    {
+      "type": "grass",
+      "shape": "rect",
+      "x": 40,
+      "y": 40,
+      "width": 120,
+      "height": 520
+    },
+    {
+      "type": "grass",
+      "shape": "rect",
+      "x": 640,
+      "y": 40,
+      "width": 120,
+      "height": 520
+    },
+    {
+      "type": "grass",
+      "shape": "rect",
+      "x": 160,
+      "y": 40,
+      "width": 480,
+      "height": 80
+    },
+    {
+      "type": "grass",
+      "shape": "rect",
+      "x": 160,
+      "y": 480,
+      "width": 480,
+      "height": 80
+    },
+    {
+      "type": "asphalt",
+      "shape": "rect",
+      "x": 160,
+      "y": 120,
+      "width": 480,
+      "height": 360
+    },
+    {
+      "type": "startLine",
+      "shape": "rect",
+      "x": 360,
+      "y": 510,
+      "width": 80,
+      "height": 20
+    }
+  ]
+}
