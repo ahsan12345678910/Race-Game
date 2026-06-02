@@ -49,14 +49,14 @@ class AudioManager {
     }
   }
 
-  async updateEngine(speedKmh: number, racing: boolean): Promise<void> {
+  async updateEngine(speedKmh: number): Promise<void> {
     if (!this.soundEnabled || !this.engineSound) return;
 
     try {
       const status = await this.engineSound.getStatusAsync();
       if (!status.isLoaded) return;
 
-      if (!racing || speedKmh < 2) {
+      if (speedKmh < 2) {
         if (status.isPlaying) await this.engineSound.pauseAsync();
         return;
       }

@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 interface TouchControlsProps {
-  onTouchMove: (x: number, y: number) => void;
+  onTouchMove: (x: number) => void;
   onTouchEnd: () => void;
   onBrake: (pressed: boolean) => void;
 }
@@ -14,7 +14,7 @@ function TouchControlsComponent({ onTouchMove, onTouchEnd, onBrake }: TouchContr
         style={styles.steerZone}
         onStartShouldSetResponder={() => true}
         onMoveShouldSetResponder={() => true}
-        onResponderMove={(e) => onTouchMove(e.nativeEvent.locationX, e.nativeEvent.locationY)}
+        onResponderMove={(e) => onTouchMove(e.nativeEvent.locationX)}
         onResponderRelease={onTouchEnd}
         onResponderTerminate={onTouchEnd}
       />

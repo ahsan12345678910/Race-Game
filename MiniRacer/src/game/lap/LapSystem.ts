@@ -70,7 +70,7 @@ export function updateLapSystem(
 
   if (prevSide !== null && side !== prevSide && side > 0 && prevSide <= 0 && dirOk && speedOk) {
     const lapTime = lap.raceTime - lap.lastCrossTime;
-    if (lap.currentLap > 0) {
+    if (lap.currentLap >= 1) {
       lap.lapTimes.push(lapTime);
       if (lap.bestLap === null || lapTime < lap.bestLap) {
         lap.bestLap = lapTime;

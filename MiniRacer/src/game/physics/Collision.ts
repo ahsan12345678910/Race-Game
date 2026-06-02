@@ -28,8 +28,8 @@ export function resolveBarrierCollision(car: CarState, track: Track): CarState {
     return car;
   }
 
-  car.x = clamp(car.x, 50, track.width - 50);
-  car.y = clamp(car.y, 50, track.height - 50);
+  car.x = clamp(car.x, 44, track.width - 44);
+  car.y = clamp(car.y, 44, track.height - 44);
 
   car.vx *= -0.35;
   car.vy *= -0.35;

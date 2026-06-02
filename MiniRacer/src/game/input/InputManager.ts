@@ -25,8 +25,8 @@ export class InputManager {
 
   updateTouchZones(input: TouchZoneInput): InputState {
     let steer = 0;
-    let accel = 1;
     const brake = input.brakePressed ? 1 : 0;
+    let accel = input.touchX !== null ? 1 : 0;
 
     if (input.touchX !== null && input.screenWidth > 0) {
       const half = input.screenWidth / 2;

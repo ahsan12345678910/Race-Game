@@ -48,7 +48,8 @@ export function GameScreen({ navigation }: Props) {
   }, [screenW, screenH, track.width, track.height]);
 
   const applyInput = useCallback(() => {
-    if (settings.controlMode === 'joystick') {
+    const { settings: currentSettings } = useGameStore.getState();
+    if (currentSettings.controlMode === 'joystick') {
       const j = joystickRef.current;
       const state = inputManager.updateJoystick({
         dx: j.dx,
@@ -67,7 +68,7 @@ export function GameScreen({ navigation }: Props) {
       });
       setControls(state);
     }
-  }, [inputManager, setControls, settings.controlMode]);
+  }, [inputManager, setControls]);
 
   useEffect(() => {
     audioManager.setEnabled(soundEnabled);
@@ -83,8 +84,8 @@ export function GameScreen({ navigation }: Props) {
       if (stepCount.current % RENDER_EVERY_N_STEPS === 0) {
         setRenderTick((n) => n + 1);
       }
-      const { car: c, settings: st } = useGameStore.getState();
-      void audioManager.updateEngine(speedToKmh(c.speed), st.soundEnabled);
+      const { car: c } = useGameStore.getState();
+      void audioManager.updateEngine(speedToKmh(c.speed));
     });
 
     loopRef.current = loop;

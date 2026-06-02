@@ -4,9 +4,9 @@
   "height": 600,
   "startLine": {
     "x1": 360,
-    "y1": 520,
+    "y1": 440,
     "x2": 440,
-    "y2": 520,
+    "y2": 440,
     "direction": 270
   },
   "zones": [
@@ -86,9 +86,9 @@
       "type": "startLine",
       "shape": "rect",
       "x": 360,
-      "y": 510,
+      "y": 432,
       "width": 80,
-      "height": 20
+      "height": 16
     }
   ]
 }
